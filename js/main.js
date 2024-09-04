@@ -181,3 +181,6 @@ $( "[data_clear_search]" ).click(function() {
 
 
 });
+
+sessionStorage.setItem('office', offices_dropdown.dropdown("get value"));
+sessionStorage.setItem('department', departments_dropdown.dropdown("get value"));
