@@ -251,6 +251,9 @@ export function createGreenhouseJobsPlugin(options) {
         let office = sessionStorage.getItem('office') == null ? "all" : sessionStorage.getItem('office');
         let department = sessionStorage.getItem('department') == null ? "all" : sessionStorage.getItem('department')
         let url_redirect = `${setting.baseURL}?query=${state.query}&office=${office}&department=${department}`;
+
+        department = department.replace('&', '%26');
+        department = department.replace(' ', '+');
         /* js redirect */
         window.location.href = url_redirect;
 
