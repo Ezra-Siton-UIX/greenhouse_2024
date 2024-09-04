@@ -27,10 +27,10 @@ function compare_office_and_return_boolean(job,state){
 
   if(num_of_offices_under_this_job == 1){
     /* only one office */
-     if(office_name === state_value)is_exsist = true;
+    if(office_name === state_value)is_exsist = true;
   }else if(num_of_offices_under_this_job > 1){/* more than one office - compare also to location */
     /* if more than one office use location value */
-   
+
     job.offices.forEach((office) => {
       const this_loop_office_name = office.name.toLowerCase().replace('&', '_');
       const this_location_name = job.location.name.toLowerCase().replace('&', '_');
@@ -250,10 +250,12 @@ export function createGreenhouseJobsPlugin(options) {
 
         let office = sessionStorage.getItem('office') == null ? "all" : sessionStorage.getItem('office');
         let department = sessionStorage.getItem('department') == null ? "all" : sessionStorage.getItem('department')
-        let url_redirect = `${setting.baseURL}?query=${state.query}&office=${office}&department=${department}`;
 
         department = department.replace('&', '%26');
         department = department.replace(' ', '+');
+
+
+        let url_redirect = `${setting.baseURL}?query=${state.query}&office=${office}&department=${department}`;
         /* js redirect */
         window.location.href = url_redirect;
 
