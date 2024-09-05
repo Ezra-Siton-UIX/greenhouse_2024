@@ -8,7 +8,7 @@ import { addClassToAttributeSelector } from "../js/utility/utility_functions.js"
 import { createGreenhouseJobsPlugin, departments_tree } from "../js/autocomplete/plugins/createGreenhouseJobsPlugin.js";
 import { analyticsPlugin, control_url_params } from "../js/autocomplete/index.js";
 
-/* ezra siton */
+/* ezra siton - web development */
 
 /* API calls */
 import { jobs, meta } from "../js/api_get/jobs.js"; /* https://api.greenhouse.io/v1/boards/lightricks/jobs?content=true */
